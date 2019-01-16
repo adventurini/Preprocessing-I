@@ -68,18 +68,25 @@ body{
 	font-family: @fonts;
 }
 
+.bordered{
+	border-bottom: 1px solid black;
+}
+
+.flex-box{
+	display:flex;
+}
+
 nav{
-	display: flex;
+	.flex-box();
 	justify-content: space-evenly;
 }
 nav a{ 
 	text-decoration:none;
 	color: @font-color-main;
 	font-family: @fonts;
-	@media (max-width:500px){;
+	@media (max-width:500px){
 		font-size: .9rem;
 	}
-
  }
 
  nav a:hover{
@@ -187,15 +194,17 @@ li::before {content: "•"; color: rgb(198, 233, 221);
 }
 
 .intro{
+	// .bordered();
 	text-align: center;
 	margin: 0 auto;
-	width:80%;
+	width:60%;
+	
 }
 
 
 .main-content{
 	width:100%;
-	display: flex;
+	.flex-box();
 	@media (max-width:500px){
 display: block;
 margin: 0 auto;	
@@ -203,8 +212,8 @@ margin: 0 auto;
 }
 
 .left-content{
-	width:65%;
-	margin: 0 20px 0 0px;
+	width:70%;
+	margin: 0 20px 0 30px;
 	@media (max-width:500px){
 		width:100%;
 		margin: 0 auto;	
@@ -212,14 +221,15 @@ margin: 0 auto;
 }
 
 .right-content{
-	width: 35%;
-	margin: 0 10px 0 10px;
+	width: 30%;
+	margin: 0 0px 0 40px;
 	@media (max-width:500px){
 		width:100%;
 		margin: 0 auto;	
 		}
 }
 h3{
+	.bordered();
 	font-weight: bold;
 	font-family: @fonts-2;
 	font-size: 1.67rem;
@@ -241,6 +251,7 @@ h3{
 
 
 h4{
+	.bordered();
 	font-weight: bold;
 	font-family: @fonts-2;
 	font-size: 1.5rem;
@@ -295,4 +306,13 @@ address{
 	line-height:2;
 	color: @font-color-p;
 	letter-spacing: rem;
+}
+
+p a, address a{
+	text-decoration:none;
+	color: @font-color-main;
+}
+
+p a:hover, address a:hover{
+	background: pink;
 }

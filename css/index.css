@@ -137,6 +137,12 @@ body {
 body {
   font-family: Noto Sans;
 }
+.bordered {
+  border-bottom: 1px solid black;
+}
+.flex-box {
+  display: flex;
+}
 nav {
   display: flex;
   justify-content: space-evenly;
@@ -261,7 +267,7 @@ li::before {
 .intro {
   text-align: center;
   margin: 0 auto;
-  width: 80%;
+  width: 60%;
 }
 .main-content {
   width: 100%;
@@ -274,8 +280,8 @@ li::before {
   }
 }
 .left-content {
-  width: 65%;
-  margin: 0 20px 0 0px;
+  width: 70%;
+  margin: 0 20px 0 30px;
 }
 @media (max-width: 500px) {
   .left-content {
@@ -284,8 +290,8 @@ li::before {
   }
 }
 .right-content {
-  width: 35%;
-  margin: 0 10px 0 10px;
+  width: 30%;
+  margin: 0 0px 0 40px;
 }
 @media (max-width: 500px) {
   .right-content {
@@ -294,6 +300,7 @@ li::before {
   }
 }
 h3 {
+  border-bottom: 1px solid black;
   font-weight: bold;
   font-family: Calibri;
   font-size: 1.67rem;
@@ -316,6 +323,7 @@ h3 {
   }
 }
 h4 {
+  border-bottom: 1px solid black;
   font-weight: bold;
   font-family: Calibri;
   font-size: 1.5rem;
@@ -367,4 +375,13 @@ address {
   line-height: 2;
   color: #585555;
   letter-spacing: rem;
+}
+p a,
+address a {
+  text-decoration: none;
+  color: #9591AF;
+}
+p a:hover,
+address a:hover {
+  background: pink;
 }
