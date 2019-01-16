@@ -1,1 +1,370 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1.25;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: Noto Sans;
+}
+nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+nav a {
+  text-decoration: none;
+  color: #9591AF;
+  font-family: Noto Sans;
+}
+@media (max-width: 500px) {
+  nav a {
+    font-size: 0.9rem;
+  }
+}
+nav a:hover {
+  text-decoration: underline;
+}
+.container {
+  margin: 20px;
+}
+.heading {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+h1 {
+  font-size: 2.5rem;
+  line-height: 3;
+  font-family: Noto Sans;
+  width: 100%;
+  letter-spacing: 1.25rem;
+  color: #9591AF;
+}
+@media (max-width: 800px) {
+  h1 {
+    letter-spacing: 0.6rem;
+    font-size: 1.9rem;
+  }
+}
+@media (max-width: 500px) {
+  h1 {
+    letter-spacing: 0.5rem;
+    font-size: 1.35rem;
+  }
+}
+.border {
+  margin: 0 auto;
+  width: 75%;
+  border: 0.5px solid #b9b9df73;
+  border-radius: 10px;
+}
+@media (max-width: 800px) {
+  .border {
+    width: 70%;
+  }
+}
+h2 {
+  font-family: Calibri;
+  font-size: 1.65rem;
+  line-height: 4;
+  color: #91AFA5;
+  letter-spacing: 0.25rem;
+}
+@media (max-width: 800px) {
+  h2 {
+    letter-spacing: 0.22rem;
+    line-height: 4;
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 500px) {
+  h2 {
+    letter-spacing: 0.22rem;
+    line-height: 5;
+    font-size: 1.1rem;
+  }
+}
+.table {
+  display: table;
+  margin: 0 auto;
+}
+#horizontal-list {
+  display: inline;
+  font-family: Calibri;
+  font-size: 0.75rem;
+  color: #91AFA5;
+  letter-spacing: 0.1rem;
+  list-style: none;
+}
+@media (max-width: 800px) {
+  #horizontal-list {
+    letter-spacing: 0.1rem;
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 500px) {
+  #horizontal-list {
+    letter-spacing: 0.1rem;
+    font-size: 0.4rem;
+  }
+}
+#horizontal-list li {
+  display: inline;
+}
+li::before {
+  content: "•";
+  color: #c6e9dd;
+  display: inline-block;
+  width: 1rem;
+}
+.border-2 {
+  margin: 20px auto;
+  width: 80%;
+  border: 2px solid #cae7eb77;
+  border-radius: 10px;
+}
+@media (max-width: 800px) {
+  .border-2 {
+    width: 80%;
+  }
+}
+.intro {
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+}
+.main-content {
+  width: 100%;
+  display: flex;
+}
+@media (max-width: 500px) {
+  .main-content {
+    display: block;
+    margin: 0 auto;
+  }
+}
+.left-content {
+  width: 65%;
+  margin: 0 20px 0 0px;
+}
+@media (max-width: 500px) {
+  .left-content {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+.right-content {
+  width: 35%;
+  margin: 0 10px 0 10px;
+}
+@media (max-width: 500px) {
+  .right-content {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+h3 {
+  font-weight: bold;
+  font-family: Calibri;
+  font-size: 1.67rem;
+  line-height: 3;
+  color: black;
+  letter-spacing: 0.12rem;
+}
+@media (max-width: 800px) {
+  h3 {
+    letter-spacing: 0.1rem;
+    line-height: 3;
+    font-size: 1.38rem;
+  }
+}
+@media (max-width: 500px) {
+  h3 {
+    letter-spacing: 0.1rem;
+    line-height: 3;
+    font-size: 1.29rem;
+  }
+}
+h4 {
+  font-weight: bold;
+  font-family: Calibri;
+  font-size: 1.5rem;
+  line-height: 3;
+  color: black;
+  letter-spacing: 0.1rem;
+}
+@media (max-width: 800px) {
+  h4 {
+    letter-spacing: 0.1rem;
+    line-height: 3;
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 500px) {
+  h4 {
+    letter-spacing: 0.1rem;
+    line-height: 3;
+    font-size: 1.1rem;
+  }
+}
+h5 {
+  font-weight: bold;
+  font-family: Calibri;
+  font-size: 1.1rem;
+  line-height: 2;
+  color: black;
+  letter-spacing: 0.05rem;
+}
+h6 {
+  font-weight: bold;
+  font-style: italic;
+  font-family: Calibri;
+  font-size: 0.95rem;
+  line-height: 2;
+  color: black;
+  letter-spacing: rem;
+}
+p {
+  font-family: Noto Sans;
+  font-size: 0.75rem;
+  line-height: 2;
+  color: #585555;
+  letter-spacing: rem;
+}
+address {
+  font-family: Noto Sans;
+  font-size: 0.75rem;
+  line-height: 2;
+  color: #585555;
+  letter-spacing: rem;
+}
