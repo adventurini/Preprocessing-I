@@ -157,8 +157,9 @@ nav a {
     font-size: 0.9rem;
   }
 }
-nav a:hover {
-  text-decoration: underline;
+a:hover {
+  background: pink;
+  border-radius: 5px;
 }
 .container {
   margin: 20px;
@@ -168,7 +169,7 @@ nav a:hover {
   width: 100%;
   text-align: center;
 }
-h1 {
+.heading h1 {
   font-size: 2.5rem;
   line-height: 3;
   font-family: Noto Sans;
@@ -177,29 +178,29 @@ h1 {
   color: #9591AF;
 }
 @media (max-width: 800px) {
-  h1 {
-    letter-spacing: 0.6rem;
-    font-size: 1.9rem;
+  .heading h1 {
+    letter-spacing: 0.55rem;
+    font-size: 1.8rem;
   }
 }
 @media (max-width: 500px) {
-  h1 {
+  .heading h1 {
     letter-spacing: 0.5rem;
     font-size: 1.35rem;
   }
 }
-.border {
+.heading .border {
   margin: 0 auto;
   width: 75%;
   border: 0.5px solid #b9b9df73;
   border-radius: 10px;
 }
 @media (max-width: 800px) {
-  .border {
+  .heading .border {
     width: 70%;
   }
 }
-h2 {
+.heading h2 {
   font-family: Calibri;
   font-size: 1.65rem;
   line-height: 4;
@@ -207,24 +208,24 @@ h2 {
   letter-spacing: 0.25rem;
 }
 @media (max-width: 800px) {
-  h2 {
+  .heading h2 {
     letter-spacing: 0.22rem;
     line-height: 4;
     font-size: 1.25rem;
   }
 }
 @media (max-width: 500px) {
-  h2 {
+  .heading h2 {
     letter-spacing: 0.22rem;
     line-height: 5;
     font-size: 1.1rem;
   }
 }
-.table {
+.heading .table {
   display: table;
   margin: 0 auto;
 }
-#horizontal-list {
+.heading #horizontal-list {
   display: inline;
   font-family: Calibri;
   font-size: 0.75rem;
@@ -233,34 +234,34 @@ h2 {
   list-style: none;
 }
 @media (max-width: 800px) {
-  #horizontal-list {
+  .heading #horizontal-list {
     letter-spacing: 0.1rem;
     font-size: 0.7rem;
   }
 }
 @media (max-width: 500px) {
-  #horizontal-list {
+  .heading #horizontal-list {
     letter-spacing: 0.1rem;
     font-size: 0.4rem;
   }
 }
-#horizontal-list li {
+.heading #horizontal-list li {
   display: inline;
 }
-li::before {
+.heading li::before {
   content: "•";
   color: #c6e9dd;
   display: inline-block;
   width: 1rem;
 }
-.border-2 {
+.heading .border-2 {
   margin: 20px auto;
   width: 80%;
   border: 2px solid #cae7eb77;
   border-radius: 10px;
 }
 @media (max-width: 800px) {
-  .border-2 {
+  .heading .border-2 {
     width: 80%;
   }
 }
@@ -268,6 +269,36 @@ li::before {
   text-align: center;
   margin: 0 auto;
   width: 60%;
+}
+.intro h3 {
+  border-bottom: 1px solid black;
+  font-weight: bold;
+  font-family: Calibri;
+  font-size: 1.67rem;
+  line-height: 3;
+  color: black;
+  letter-spacing: 0.12rem;
+}
+@media (max-width: 800px) {
+  .intro h3 {
+    letter-spacing: 0.1rem;
+    line-height: 3;
+    font-size: 1.38rem;
+  }
+}
+@media (max-width: 500px) {
+  .intro h3 {
+    letter-spacing: 0.1rem;
+    line-height: 3;
+    font-size: 1.29rem;
+  }
+}
+.intro p {
+  font-family: Noto Sans;
+  font-size: 0.75rem;
+  line-height: 2;
+  color: #585555;
+  letter-spacing: rem;
 }
 .main-content {
   width: 100%;
@@ -279,50 +310,27 @@ li::before {
     margin: 0 auto;
   }
 }
-.left-content {
+.main-content .left-content {
   width: 70%;
   margin: 0 20px 0 30px;
 }
 @media (max-width: 500px) {
-  .left-content {
+  .main-content .left-content {
     width: 100%;
     margin: 0 auto;
   }
 }
-.right-content {
+.main-content .right-content {
   width: 30%;
   margin: 0 0px 0 40px;
 }
 @media (max-width: 500px) {
-  .right-content {
+  .main-content .right-content {
     width: 100%;
     margin: 0 auto;
   }
 }
-h3 {
-  border-bottom: 1px solid black;
-  font-weight: bold;
-  font-family: Calibri;
-  font-size: 1.67rem;
-  line-height: 3;
-  color: black;
-  letter-spacing: 0.12rem;
-}
-@media (max-width: 800px) {
-  h3 {
-    letter-spacing: 0.1rem;
-    line-height: 3;
-    font-size: 1.38rem;
-  }
-}
-@media (max-width: 500px) {
-  h3 {
-    letter-spacing: 0.1rem;
-    line-height: 3;
-    font-size: 1.29rem;
-  }
-}
-h4 {
+.main-content h4 {
   border-bottom: 1px solid black;
   font-weight: bold;
   font-family: Calibri;
@@ -332,20 +340,20 @@ h4 {
   letter-spacing: 0.1rem;
 }
 @media (max-width: 800px) {
-  h4 {
+  .main-content h4 {
     letter-spacing: 0.1rem;
     line-height: 3;
     font-size: 1.25rem;
   }
 }
 @media (max-width: 500px) {
-  h4 {
+  .main-content h4 {
     letter-spacing: 0.1rem;
     line-height: 3;
     font-size: 1.1rem;
   }
 }
-h5 {
+.main-content h5 {
   font-weight: bold;
   font-family: Calibri;
   font-size: 1.1rem;
@@ -353,7 +361,7 @@ h5 {
   color: black;
   letter-spacing: 0.05rem;
 }
-h6 {
+.main-content h6 {
   font-weight: bold;
   font-style: italic;
   font-family: Calibri;
@@ -362,26 +370,22 @@ h6 {
   color: black;
   letter-spacing: rem;
 }
-p {
+.main-content address {
   font-family: Noto Sans;
   font-size: 0.75rem;
   line-height: 2;
   color: #585555;
   letter-spacing: rem;
 }
-address {
+.main-content p {
   font-family: Noto Sans;
   font-size: 0.75rem;
   line-height: 2;
   color: #585555;
   letter-spacing: rem;
 }
-p a,
-address a {
+.main-content p a,
+.main-content address a {
   text-decoration: none;
   color: #9591AF;
-}
-p a:hover,
-address a:hover {
-  background: pink;
 }
