@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.25;
 }
 ol, ul {
 	list-style: none;
@@ -57,3 +57,267 @@ html, body {
     height: 100%;
 }
 
+@body-size: 1.2rem;
+@fonts: Noto Sans;
+@fonts-2: Calibri;
+@font-color-main: #9591AF;
+@font-color-second: #91AFA5;
+@font-color-p: rgb(88, 85, 85);
+
+body{
+	font-family: @fonts;
+}
+
+.bordered{
+	border-bottom: 1px solid black;
+}
+
+.flex-box{
+	display:flex;
+}
+
+nav{
+	.flex-box();
+	justify-content: space-evenly;
+	a{ 
+	text-decoration:none;
+	color: @font-color-main;
+	font-family: @fonts;
+	@media (max-width:500px){
+		font-size: .9rem;
+	}
+
+ }
+}
+
+a:hover{
+	background:pink;
+	border-radius:5px;
+	// text-decoration: underline;
+}
+
+.container{
+	margin: 20px;
+}
+
+.heading{
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+h1{
+	font-size: 2.5rem;
+	line-height: 3;
+	font-family: @fonts;
+	width: 100%;
+	letter-spacing: 1.25rem;
+	color: @font-color-main;
+
+	@media (max-width:800px){
+		letter-spacing: .55rem;
+		font-size: 1.8rem;
+	}
+	@media (max-width:500px){
+		letter-spacing: .5rem;
+		font-size: 1.35rem;
+	}
+}
+
+.border{
+	margin: 0 auto;
+	width: 75%;
+	border: .5px solid #b9b9df73;
+	border-radius:10px;
+	@media (max-width:800px){
+		width:70%;
+	}
+}
+
+h2{
+	font-family: @fonts-2;
+	font-size: 1.65rem;
+	line-height:4;
+	color: @font-color-second;
+	letter-spacing: .25rem;
+
+	@media (max-width:800px){
+		letter-spacing: .22rem;
+		line-height:4;
+		font-size: 1.25rem;
+	}
+	@media (max-width:500px){
+		letter-spacing: .22rem;
+		line-height:5;
+		font-size: 1.1rem;
+	}
+}
+
+.table{
+	display:table;
+	margin: 0 auto;
+}
+#horizontal-list{
+
+	display: inline;
+	font-family: @fonts-2;
+	font-size: .75rem;
+	color:#91AFA5;
+	letter-spacing: .1rem;
+	list-style: none;
+
+	@media (max-width:800px){
+		letter-spacing: .1rem;
+		font-size: .7rem;
+	}
+	@media (max-width:500px){
+		letter-spacing: .1rem;
+		font-size: .4rem;
+	}
+}
+
+#horizontal-list li{
+	display:inline;
+}
+
+li::before {content: "•"; color: rgb(198, 233, 221);
+	display: inline-block; width: 1rem;
+}
+
+.border-2{	
+	margin: 20px auto;
+	width: 80%;
+	border: 2px solid #cae7eb77;
+	border-radius:10px;
+	@media (max-width:800px){
+		width:80%;
+	}
+
+}
+}
+
+.intro{
+	// .bordered();
+	text-align: center;
+	margin: 0 auto;
+	width:60%;
+
+	h3{
+		.bordered();
+		font-weight: bold;
+		font-family: @fonts-2;
+		font-size: 1.67rem;
+		line-height:3;
+		color: black;
+		letter-spacing: .12rem;
+	
+		@media (max-width:800px){
+			letter-spacing: .1rem;
+			line-height:3;
+			font-size: 1.38rem;
+		}
+		@media (max-width:500px){
+			letter-spacing: .1rem;
+			line-height:3;
+			font-size: 1.29rem;
+		}
+	}
+
+	p{ font-family: Noto Sans;
+		font-size: .75rem;
+		line-height:2;
+		color: @font-color-p;
+		letter-spacing: rem;
+	
+	
+	}
+	
+}
+
+
+.main-content{
+	width:100%;
+	.flex-box();
+	@media (max-width:500px){
+display: block;
+margin: 0 auto;	
+}
+.left-content{
+	width:70%;
+	margin: 0 20px 0 30px;
+	@media (max-width:500px){
+		width:100%;
+		margin: 0 auto;	
+	}
+}
+.right-content{
+	width: 30%;
+	margin: 0 0px 0 40px;
+	@media (max-width:500px){
+		width:100%;
+		margin: 0 auto;	
+		}
+}
+h4{
+	.bordered();
+	font-weight: bold;
+	font-family: @fonts-2;
+	font-size: 1.5rem;
+	line-height:3;
+	color: black;
+	letter-spacing: .1rem;
+
+	@media (max-width:800px){
+		letter-spacing: .1rem;
+		line-height:3;
+		font-size: 1.25rem;
+	}
+	@media (max-width:500px){
+		letter-spacing: .1rem;
+		line-height:3;
+		font-size: 1.1rem;
+	}
+}
+
+h5{
+	font-weight: bold;
+	font-family: @fonts-2;
+	font-size: 1.1rem;
+	line-height:2;
+	color: black;
+	letter-spacing: .05rem;
+
+}
+
+h6{
+	font-weight: bold;
+	font-style: italic;
+	font-family: @fonts-2;
+	font-size: .95rem;
+	line-height:2;
+	color: black;
+	letter-spacing: rem;
+}
+
+
+
+address{
+	font-family: Noto Sans;
+	font-size: .75rem;
+	line-height:2;
+	color: @font-color-p;
+	letter-spacing: rem;
+}
+
+p{ font-family: Noto Sans;
+	font-size: .75rem;
+	line-height:2;
+	color: @font-color-p;
+	letter-spacing: rem;
+
+
+}
+
+p a, address a{
+	text-decoration:none;
+	color: @font-color-main;
+}
+}
